@@ -1,0 +1,8 @@
+defaults
+not IE 11
+not OperaMini all
+not OperaMobile > 0
+not UCAndroid > 0
+not QQAndroid > 0
+not Baidu > 0
+not Kaios > 0
