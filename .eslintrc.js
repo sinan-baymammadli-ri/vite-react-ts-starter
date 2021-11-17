@@ -1,10 +1,8 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  settings: {
-    react: {
-      version: "detect",
-    },
+  env: {
+    browser: true,
   },
   plugins: ["@typescript-eslint", "simple-import-sort", "react-hooks"],
   extends: [
@@ -14,6 +12,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:compat/recommended",
     "prettier",
   ],
   rules: {
@@ -23,5 +22,13 @@ module.exports = {
     "simple-import-sort/exports": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+    polyfills: [
+      // Add if any
+    ],
   },
 };
