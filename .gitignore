@@ -49,10 +49,6 @@ node_modules/
 # NPM token variable file
 .npmrc
 
-# IDE Config Files
-.idea
-.vscode
-
 errorShots/
 package-lock.json
 
