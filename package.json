@@ -8,8 +8,9 @@
     "format": "prettier . --write",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint '**/*.{css,scss}' --fix",
-    "cypress:open": "cypress open",
-    "test": "jest"
+    "test:e2e": "cypress open",
+    "test:unit": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -38,8 +39,10 @@
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
+    "lint-staged": "^12.0.2",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
@@ -50,5 +53,21 @@
     "stylelint-no-unsupported-browser-features": "^5.0.2",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write"
+    ],
+    "**/*.{css,scss}": [
+      "stylelint --fix"
+    ],
+    "**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
