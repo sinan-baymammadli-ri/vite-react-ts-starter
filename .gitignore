@@ -54,3 +54,5 @@ package-lock.json
 
 # sonarqube-scanner
 .scannerwork/
+
+.DS_Store
