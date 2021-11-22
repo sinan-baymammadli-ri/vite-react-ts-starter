@@ -50,7 +50,6 @@ node_modules/
 .npmrc
 
 errorShots/
-package-lock.json
 
 # sonarqube-scanner
 .scannerwork/
